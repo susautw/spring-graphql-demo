@@ -1,0 +1,13 @@
+extend type Query {
+    authors: [Author!]!
+    author(id: ID, name: String): Author
+}
+
+
+type Author{
+    # id doc
+    id: ID!
+
+    name: String!
+    books(limit: Int): [Book!]!
+}

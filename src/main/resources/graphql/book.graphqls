@@ -1,0 +1,14 @@
+extend type Query{
+    books: [Book!]!
+    book(id: ID, name: String): Book
+}
+
+extend type Mutation {
+    addBook(name: String, authorId: ID): Book
+    delBook(id: ID!): Book
+}
+
+type Book{
+    id: ID!
+    name: String!
+}
